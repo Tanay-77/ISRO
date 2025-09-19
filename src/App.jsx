@@ -1,8 +1,16 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import History from './pages/History'
 
 const App = () => {
   return (
-    <div className='text-6xl text-white '>App</div>
+    <div>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/history' element={<History/>} />
+      </Routes>
+    </div>
   )
 }
 
