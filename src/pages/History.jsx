@@ -11,9 +11,11 @@ const History = () => {
     'https://www.isro.gov.in/media_isro/image/chairmanimages/MGK_Menon.jpg.webp',
     'https://www.isro.gov.in/media_isro/image/chairmanimages/U_R_Rao.jpg.webp',
     'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRXA_MWTeChdHisZmwq6ninGsU2unsO5J0U3z_EdGD3agBvUiVAbvQDsl8fs7ShAkLA8YMf3mvWwI7HKnGdYrZNghgZtt8Pypobk9n9b_OlJw',
+    'https://www.isro.gov.in/media_isro/image/chairmanimages/kiran.jpg.webp',
+    'https://www.isro.gov.in/media_isro/image/chairmanimages/dr.k-radhakrishnan-c.jpg.webp',
     'https://www.isro.gov.in/media_isro/image/chairmanimages/madhavannair.jpg.webp',
     'https://www.isro.gov.in/media_isro/image/chairmanimages/drksivan1.jpg.webp',
-    'https://www.isro.gov.in/media_isro/image/chairman.png.webp'
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROnJoCoQv_yZlgcbNQSfKAZhW_aDdZgTwBtA&s'
 
   ]
   gsap.registerPlugin(ScrollTrigger)
@@ -26,7 +28,17 @@ const History = () => {
         start:'top 28.1%',
         end:'top -100%',
         pin:true,
-        scrub:true
+        scrub:true,
+        onUpdate:(elem)=>{
+          let imageIndex;
+          if(elem.progress<1){
+            imageIndex = Math.floor(elem.progress * imageArray.length)
+          } else{
+            imageIndex = imageArray.length-1
+          }
+          imageRef.current.src = imageArray[imageIndex]
+            
+        }
       }
     })
   })
