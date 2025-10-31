@@ -24,7 +24,7 @@ const History = () => {
     gsap.to(imageDevRef.current,{
       scrollTrigger:{
         trigger:imageDevRef.current,
-        markers:true,
+       
         start:'top 28.1%',
         end:'top -100%',
         pin:true,
