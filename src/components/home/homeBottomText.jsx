@@ -3,9 +3,15 @@ import {Link} from 'react-router-dom'
 
 const HomeBottomText = () => {
   return (
-    <div className='text-white font-[font2] flex items-center justify-center gap-3'>
-  <Link to='/projects' className='text-[6vw]  leading-[6vw] uppercase border-4 border-solid border-white rounded-full px-10 pt-1 pb-0 hover:border-blue-400 hover:text-blue-400 '>Projects</Link>
-  <Link to='/history' className='text-[6vw] leading-[6vw] uppercase border-4 border-solid border-white rounded-full px-10 pt-1 pb-0  '>History</Link>
+    <div className='text-white font-[font2] flex gap-6 items-center'>
+      <Link to='/projects' className='text-lg uppercase border border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 font-semibold flex items-center gap-2 group'>
+        Projects
+        <span className='group-hover:translate-x-1 transition'>→</span>
+      </Link>
+      <Link to='/history' className='text-lg uppercase border border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 font-semibold flex items-center gap-2 group'>
+        History
+        <span className='group-hover:translate-x-1 transition'>→</span>
+      </Link>
     </div>
   )
 }

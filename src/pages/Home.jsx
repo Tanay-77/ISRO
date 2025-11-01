@@ -49,16 +49,63 @@ const Home = () => {
     }
   }
   return (
-    <div>
-    <div className='h-screen w-screen fixed'>
-      <Video />
-    </div>
-    <div className='h-screen w-screen relative flex flex-col justify-between'>
-      <HomeHeroText/>
-      <HomeBottomText />
+    <div className='h-screen w-screen bg-black overflow-hidden'>
+      {/* Navigation Bar */}
+      <nav className='absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-4'>
+        <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-16 w-auto' />
+        <div className='flex gap-8 text-white text-sm font-semibold tracking-wide'>
+          <a href='#' className='hover:text-blue-400 transition'>MISSIONS</a>
+          <a href='#' className='hover:text-blue-400 transition'>VEHICLES</a>
+          <a href='#' className='hover:text-blue-400 transition'>ABOUT</a>
+        </div>
+      </nav>
 
-    </div>
-    {/* Floating music control with animated icon */}
+      {/* Background Video */}
+      <div className='absolute inset-0 pointer-events-none hidden'>
+        <Video />
+      </div>
+
+      {/* Dark overlay */}
+      <div className='absolute inset-0 bg-black/50 pointer-events-none'></div>
+
+      {/* Main Content Container */}
+      <div className='relative h-full w-full flex items-center'>
+        {/* Left Side: Content */}
+        <div className='w-1/2 z-10 px-16 flex flex-col justify-center'>
+          <div className='space-y-8'>
+            {/* Main Headline */}
+            <div>
+              <h1 className='text-7xl font-bold text-white leading-tight tracking-tight'>
+                ADVANCING
+                <br />
+                <span className='text-orange-500'>SPACE</span> SCIENCE
+              </h1>
+            </div>
+
+            {/* Description */}
+            <p className='text-xl text-gray-300 max-w-lg leading-relaxed'>
+              ISRO is dedicated to space exploration and scientific research. We push the boundaries of human knowledge and technology to explore the cosmos.
+            </p>
+
+            {/* Call-to-action Buttons */}
+            <div>
+              <HomeBottomText />
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side: Decorative Space */}
+        <div className='w-1/2 h-full relative pointer-events-none overflow-hidden'>
+          {/* Video on right side */}
+          <div className='absolute inset-0'>
+            <Video />
+          </div>
+          {/* Optional glow effect overlay */}
+          <div className='absolute bottom-12 right-12 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl'></div>
+        </div>
+      </div>
+
+      {/* Music Control */}
     <button
       onClick={togglePlayback}
       className='fixed bottom-4 right-4 z-50 rounded-full bg-white/20 hover:bg-white/30 text-white border border-white/40 p-3 backdrop-blur-md transition-all duration-300'

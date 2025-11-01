@@ -2,10 +2,11 @@ import React from 'react'
 
 const HomeHeroText = () => {
   return (
-    <div className='text-white font-[font1] pt-5 text-center'>
-      <div  className='text-[8vw] uppercase leading-[7.5vw]'>isro</div>
-  <div className='text-[8vw] uppercase leading-[7.5vw] flex justify-center items-center'>G <div className='h-[7vw] w-[7vw] rounded-full overflow-hidden flex items-center justify-center'><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Rotating_earth_animated.gif" alt="" className="object-contain h-full w-full" /></div> verment Of India</div>
-      <div className='text-[8vw] uppercase leading-[7.5vw]'>Department Of Space</div>
+    <div className='text-white font-[font1]'>
+      <div className='text-9xl uppercase leading-tight font-bold'>isro</div>
+      {/* <div className='text-7xl uppercase leading-tight flex items-center gap-4 mt-4'>G <div className='h-24 w-24 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0'><img src="https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?cs=srgb&dl=pexels-pixabay-47367.jpg&fm=jpg" alt="" className="object-contain h-full w-full" /></div> overnment</div>
+      <div className='text-7xl uppercase leading-tight'>Of India</div>
+      <div className='text-6xl uppercase leading-tight mt-6'>Department Of Space</div> */}
     </div>
   )
 }

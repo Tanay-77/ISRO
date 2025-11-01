@@ -3,7 +3,7 @@ import React from 'react'
 const Video = () => {
   return (
     <div className='h-full w-full'>
-      <video  className='h-full w-full object-cover' autoPlay muted src="https://www.nasa.gov/wp-content/uploads/2025/09/a2-flyby-1min-2160p30orig.mp4"></video>
+      <img  className='h-full w-full object-cover' autoPlay muted src="https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?cs=srgb&dl=pexels-pixabay-47367.jpg&fm=jpg"></img>
     </div>
   )
 }
