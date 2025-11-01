@@ -34,7 +34,7 @@ const Stair = () => {
   })
   return (
     <div>
-        <div className='h-screen w-full fixed z-20 top-0 pointer-events-none'>
+        <div className='h-screen w-full fixed z-[100] top-0 pointer-events-none'>
             <div ref={stairPat} className='h-full w-full flex'>
             <div className='stair h-full w-1/5 bg-white'></div>
             <div className='stair h-full w-1/5 bg-white'></div>
