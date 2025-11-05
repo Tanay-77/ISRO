@@ -2,9 +2,11 @@ import React from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Stair = () => {
     const stairPat = useRef(null)
+    const currentPath = useLocation().pathname
 
   useGSAP(function(){
    
@@ -31,7 +33,7 @@ const Stair = () => {
     })
     
     
-  })
+  },[currentPath])
   return (
     <div>
         <div className='h-screen w-full fixed z-[100] top-0 pointer-events-none'>
