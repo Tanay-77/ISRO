@@ -3,6 +3,8 @@ import {useGSAP} from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import { Link } from 'react-router-dom'
+import ScrollReveal from '../components/ScrollReveal'
+
 const History = () => {
   const imageDevRef = useRef(null)
   const imageRef =useRef(null)
@@ -66,7 +68,22 @@ const History = () => {
       </div>
     </div>
     </div>
-    <div className="section2 h-screen"></div>
+
+    <div className='w-full h-full py-20 px-10 mt-20 m'>
+      <ScrollReveal
+        baseOpacity={0}
+        enableBlur={true}
+        baseRotation={5}
+        blurStrength={10}
+        containerClassName="text-white"
+        textClassName="text-6xl font-[font2] text-center"
+      >
+        When does a man die? When he is hit by a bullet? No! When he suffers a disease? No! When he ate a soup made out of a poisonous mushroom? No! A man dies when he is forgotten!
+      </ScrollReveal>
+    </div>
+    
+    <div className='h-full pt-20'></div>
+    
    </div>
     
   )
