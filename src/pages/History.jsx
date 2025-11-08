@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import {useGSAP} from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
+import { Link } from 'react-router-dom'
 const History = () => {
   const imageDevRef = useRef(null)
   const imageRef =useRef(null)
@@ -45,8 +46,15 @@ const History = () => {
   
   return (
    <div>
+     {/* ISRO Logo Navigation */}
+     <nav className='fixed top-0 left-0 right-0 z-50 px-12 py-4 bg-black/50 backdrop-blur-sm'>
+       <Link to='/'>
+         <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-16 w-auto' />
+       </Link>
+     </nav>
+     
      <div className='section1'>
-      <div ref={imageDevRef} className='absolute overflow-hidden h-[20vw] w-[15vw] rounded-3xl top-44 left-[30vw] bg-red-500 '>
+      <div ref={imageDevRef} className='absolute overflow-hidden h-[20vw] w-[15vw] rounded-3xl top-44 left-[30vw] '>
             <img ref={imageRef} className='h-full w-full object-cover' src="https://www.isro.gov.in/media_isro/image/chairmanimages/resized/Sarabhai_medium.jpg.webp" alt="" />
       </div>
       <div className='relative font-[font2] text-white'>
