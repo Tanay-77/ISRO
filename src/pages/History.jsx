@@ -7,7 +7,12 @@ import ScrollReveal from '../components/ScrollReveal'
 
 const History = () => {
   const imageDevRef = useRef(null)
-  const imageRef =useRef(null)
+  const imageRef = useRef(null)
+  const historySection1Ref = useRef(null)
+  const historySection2Ref = useRef(null)
+  const historySection3Ref = useRef(null)
+  const historySection4Ref = useRef(null)
+  
   const imageArray = ['https://www.isro.gov.in/media_isro/image/chairmanimages/resized/Sarabhai_medium.jpg.webp',
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A._P._J._Abdul_Kalam.jpg/1015px-A._P._J._Abdul_Kalam.jpg',
     'https://www.isro.gov.in/media_isro/image/chairmanimages/S_Dhawan.jpg.webp',
@@ -44,6 +49,47 @@ const History = () => {
         }
       }
     })
+
+    // History sections animations
+    const sections = [historySection1Ref, historySection2Ref, historySection3Ref, historySection4Ref]
+    
+    sections.forEach((section) => {
+      if (section.current) {
+        const textContent = section.current.querySelector('.history-text')
+        const imageContent = section.current.querySelector('.history-image')
+        
+        gsap.fromTo(textContent, 
+          { opacity: 0, x: -100 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: section.current,
+              start: 'top 80%',
+              end: 'top 30%',
+              scrub: true,
+            }
+          }
+        )
+        
+        gsap.fromTo(imageContent,
+          { opacity: 0, x: 100, scale: 0.8 },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 1,
+            scrollTrigger: {
+              trigger: section.current,
+              start: 'top 80%',
+              end: 'top 30%',
+              scrub: true,
+            }
+          }
+        )
+      }
+    })
   })
   
   return (
@@ -64,12 +110,12 @@ const History = () => {
           <h1 className='text-[20vw] text-center uppercase leading-[18vw]'>History of ISRO</h1>
       </div>
       <div className='pl-[40%] mt-20'>
-        <p className='text-6xl '>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indian Space Research Organisation (ISRO) is the space agency of India. The organisation is involved in science, engineering and technology to harvest the benefits of outer space for India and the mankind. </p>
+        <p className='text-6xl '>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Indian Space Research Organisation (ISRO) was founded in 1969 with a vision to harness space technology for national development. From its humble beginnings in a small church in Thumba, ISRO has grown into one of the world’s leading space agencies. </p>
       </div>
     </div>
     </div>
 
-    <div className='w-full h-full py-20 px-10 mt-20 m'>
+    <div className='w-full h-full py-20 px-10 mt-20'>
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
@@ -78,8 +124,93 @@ const History = () => {
         containerClassName="text-white"
         textClassName="text-6xl font-[font2] text-center"
       >
-        When does a man die? When he is hit by a bullet? No! When he suffers a disease? No! When he ate a soup made out of a poisonous mushroom? No! A man dies when he is forgotten!
+        ISRO stands as a symbol of India's scientific excellence and ambition. With each mission, it continues to explore new frontiers in space technology, research, and innovation — shaping a future driven by discovery.
       </ScrollReveal>
+    </div>
+
+    {/* History Content Sections */}
+    <div className='w-full px-20 py-10 space-y-32'>
+      
+      {/* Section 1: Aryabhata */}
+      <div ref={historySection1Ref} className='flex items-center gap-16 min-h-screen'>
+        <div className='history-text flex-1'>
+          <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>1975: Aryabhata</h2>
+          <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
+            India's first satellite, Aryabhata, was launched on April 19, 1975, from the Soviet Union. 
+            Named after the ancient Indian mathematician and astronomer, this 360 kg satellite marked India's 
+            entry into the space age. Though it had a short operational life, it paved the way for future missions 
+            and established ISRO's capability in satellite technology.
+          </p>
+        </div>
+        <div className='history-image flex-1'>
+          <img 
+            src='https://www.isro.gov.in/media_isro/image/index/Aryabhata.jpg.webp' 
+            alt='Aryabhata Satellite' 
+            className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
+          />
+        </div>
+      </div>
+
+      {/* Section 2: SLV-3 */}
+      <div ref={historySection2Ref} className='flex items-center gap-16 min-h-screen'>
+        <div className='history-text flex-1'>
+          <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>1980: SLV-3 Success</h2>
+          <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
+            On July 18, 1980, India successfully launched its first indigenous Satellite Launch Vehicle (SLV-3), 
+            placing the Rohini satellite into orbit. This historic achievement, led by Dr. APJ Abdul Kalam, 
+            made India the sixth nation to have satellite launch capability. It was a defining moment that 
+            demonstrated India's growing prowess in rocket technology.
+          </p>
+        </div>
+        <div className='history-image flex-1'>
+          <img 
+            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQRl_wB5pX0kN6xDqY2fVXYPzrZfGD38LKw&s' 
+            alt='SLV-3 Launch' 
+            className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
+          />
+        </div>
+      </div>
+
+      {/* Section 3: Mars Orbiter Mission */}
+      <div ref={historySection3Ref} className='flex items-center gap-16 min-h-screen'>
+        <div className='history-text flex-1'>
+          <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>2014: Mangalyaan</h2>
+          <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
+            On September 24, 2014, ISRO's Mars Orbiter Mission (Mangalyaan) successfully entered Mars orbit, 
+            making India the first nation to reach Mars on its maiden attempt and the fourth space agency to 
+            reach Mars. Completed at a fraction of the cost of similar missions, it showcased ISRO's efficiency 
+            and innovation in interplanetary exploration.
+          </p>
+        </div>
+        <div className='history-image flex-1'>
+          <img 
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg/330px-Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg' 
+            alt='Mars Orbiter Mission' 
+            className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
+          />
+        </div>
+      </div>
+
+      {/* Section 4: Chandrayaan-3 */}
+      <div ref={historySection4Ref} className='flex items-center gap-16 min-h-screen'>
+        <div className='history-text flex-1'>
+          <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>2023: Chandrayaan-3</h2>
+          <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
+            On August 23, 2023, India created history when Chandrayaan-3 successfully achieved a soft landing 
+            near the lunar south pole. This made India the first country to land near this unexplored region 
+            and the fourth nation to achieve a soft landing on the Moon. The mission's rover, Pragyan, 
+            explored the lunar surface, conducting vital scientific experiments.
+          </p>
+        </div>
+        <div className='history-image flex-1'>
+          <img 
+            src='https://cdn.britannica.com/92/126092-050-7A610AAE/Artist-conception-lunar-probe-Chandrayaan-1.jpg' 
+            alt='Chandrayaan-3' 
+            className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
+          />
+        </div>
+      </div>
+
     </div>
     
     <div className='h-full pt-20'></div>
