@@ -144,7 +144,7 @@ const History = () => {
         </div>
         <div className='history-image flex-1'>
           <img 
-            src='https://www.isro.gov.in/media_isro/image/index/Aryabhata.jpg.webp' 
+            src='https://images.firstpost.com/uploads/2025/04/aryabhata-2025-04-0258a8e831ece2bab19bffb3700d3234.jpg?im=FitAndFill=(596,336)' 
             alt='Aryabhata Satellite' 
             className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
           />
@@ -164,7 +164,7 @@ const History = () => {
         </div>
         <div className='history-image flex-1'>
           <img 
-            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQRl_wB5pX0kN6xDqY2fVXYPzrZfGD38LKw&s' 
+            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm9p6gpQX01rRCOJSStq4Nw3fL5p8J80-qyA55HwfL_oOg2NA5VO0yoJr8H514gAGdubT1OA_gi3OKeX3-Zxd_0H4yfh8gsGJ0dMNTzP-fk0xSZGQ-zj8Nuge75h5jfIq6s6aFd1tEc8c/s1600/SLV-3_Launch_Vehicle_1.jpg' 
             alt='SLV-3 Launch' 
             className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
           />
@@ -204,7 +204,7 @@ const History = () => {
         </div>
         <div className='history-image flex-1'>
           <img 
-            src='https://cdn.britannica.com/92/126092-050-7A610AAE/Artist-conception-lunar-probe-Chandrayaan-1.jpg' 
+            src='https://science.nasa.gov/wp-content/uploads/2023/06/chandrayaan-3-lander-rover-isro-jpg.webp' 
             alt='Chandrayaan-3' 
             className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
           />
