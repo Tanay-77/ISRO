@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import Footer from '../components/Footer'
 
 const History = () => {
   const imageDevRef = useRef(null)
@@ -213,8 +214,10 @@ const History = () => {
 
     </div>
     
-    <div className='h-full pt-20'></div>
+  <div className='h-full pt-20'></div>
     
+  <Footer />
+
    </div>
     
   )

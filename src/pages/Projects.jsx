@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const Projects = () => {
   const projects =[{
@@ -63,13 +64,14 @@ useGSAP(() => {
       <div className='pt-[30vh] text-center '>
         <h2 className='font-[font2] text-[9vw] uppercase -mt-20'>Projects</h2>
       </div>
-      <div className='-mt-0 lol'>
-         {projects.map((elem, index)=>{
-          return <div className='hero w-full h-[700px]  flex gap-4 mb-4'>
-            <ProjectCard key={index} image1={elem.image1}  image2={elem.image2} text1={elem.text1} text2={elem.text2} />
-         </div>
-         })}
+    <div className='-mt-0 lol'>
+      {projects.map((elem, index)=>{
+       return <div className='hero w-full h-[700px]  flex gap-4 mb-4'>
+        <ProjectCard key={index} image1={elem.image1}  image2={elem.image2} text1={elem.text1} text2={elem.text2} />
       </div>
+      })}
+    </div>
+    <Footer />
     </div>
   )
 }
