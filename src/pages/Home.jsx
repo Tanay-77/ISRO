@@ -9,21 +9,17 @@ const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
-    // Create audio object on mount
-    const audio = new Audio('/interstellar_chase_2.mp3') // file placed in public/
+    const audio = new Audio('/interstellar_chase_2.mp3')
     audio.loop = true
     audio.volume = 0.3
     audioRef.current = audio
 
-    // Try to autoplay; many browsers block this until user interaction
     audio.play()
       .then(() => setIsPlaying(true))
       .catch(() => {
-        // Autoplay blocked; show control to start manually
         setIsPlaying(false)
       })
 
-    // Cleanup on unmount: stop audio when navigating away
     return () => {
       if (audioRef.current) {
         audioRef.current.pause()
@@ -44,7 +40,6 @@ const Home = () => {
         await audio.play()
         setIsPlaying(true)
       } catch (e) {
-        // ignore; user gesture may still be required
       }
     }
   }

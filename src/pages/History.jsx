@@ -51,7 +51,6 @@ const History = () => {
       }
     })
 
-    // History sections animations
     const sections = [historySection1Ref, historySection2Ref, historySection3Ref, historySection4Ref]
     
     sections.forEach((section) => {
@@ -95,7 +94,6 @@ const History = () => {
   
   return (
    <div>
-     {/* ISRO Logo Navigation */}
      <nav className='fixed top-0 left-0 right-0 z-50 px-12 py-4 bg-black/50 backdrop-blur-sm'>
        <Link to='/'>
          <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-16 w-auto' />
@@ -129,10 +127,8 @@ const History = () => {
       </ScrollReveal>
     </div>
 
-    {/* History Content Sections */}
     <div className='w-full px-20 py-10 space-y-32'>
       
-      {/* Section 1: Aryabhata */}
       <div ref={historySection1Ref} className='flex items-center gap-16 min-h-screen'>
         <div className='history-text flex-1'>
           <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>1975: Aryabhata</h2>
@@ -152,7 +148,6 @@ const History = () => {
         </div>
       </div>
 
-      {/* Section 2: SLV-3 */}
       <div ref={historySection2Ref} className='flex items-center gap-16 min-h-screen'>
         <div className='history-text flex-1'>
           <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>1980: SLV-3 Success</h2>
@@ -172,7 +167,6 @@ const History = () => {
         </div>
       </div>
 
-      {/* Section 3: Mars Orbiter Mission */}
       <div ref={historySection3Ref} className='flex items-center gap-16 min-h-screen'>
         <div className='history-text flex-1'>
           <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>2014: Mangalyaan</h2>
@@ -192,7 +186,6 @@ const History = () => {
         </div>
       </div>
 
-      {/* Section 4: Chandrayaan-3 */}
       <div ref={historySection4Ref} className='flex items-center gap-16 min-h-screen'>
         <div className='history-text flex-1'>
           <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>2023: Chandrayaan-3</h2>

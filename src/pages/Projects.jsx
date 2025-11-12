@@ -36,8 +36,8 @@ const Projects = () => {
 useGSAP(() => {
   document.querySelectorAll(".hero").forEach((img) => {
     gsap.from(img, {
-      scaleY: 0.2,        // start small vertically
-      opacity: 0.4,       // fade in smoothly
+      scaleY: 0.2,
+      opacity: 0.4,
       transformOrigin: "top center",
       ease: "power2.out",
       scrollTrigger: {
@@ -54,7 +54,6 @@ useGSAP(() => {
 
   return (
     <div className='text-white p-4'>
-      {/* ISRO Logo Navigation */}
       <nav className=' top-0 left-0 right-0 z-50 px-12 py-4 bg-black/50 backdrop-blur-sm'>
         <Link to='/'>
           <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-16 w-auto' />
