@@ -1,6 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <footer className="w-full bg-black text-gray-200 py-10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -12,10 +17,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <nav className="flex gap-6 ">
-          <a href="/" className="text-gray-300 hover:text-orange-500 ">Home</a>
-          <a href="/projects" className="text-gray-300 hover:text-orange-500">Projects</a>
-          <a href="/history" className="text-gray-300 hover:text-orange-500">History</a>
+        <nav className="flex gap-6">
+          <Link to="/" onClick={scrollToTop} className="text-gray-300 hover:text-orange-500">Home</Link>
+          <Link to="/projects" onClick={scrollToTop} className="text-gray-300 hover:text-orange-500">Projects</Link>
+          <Link to="/history" onClick={scrollToTop} className="text-gray-300 hover:text-orange-500">History</Link>
         </nav>
 
         <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} ISRO Inspired. All rights reserved.</p>
