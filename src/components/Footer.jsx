@@ -15,8 +15,6 @@ const Footer = () => {
 
         <nav className="flex gap-6">
           <Link to="/" className="text-gray-300 hover:text-orange-500">Home</Link>
-          <Link to="/projects" className="text-gray-300 hover:text-orange-500">Projects</Link>
-          <Link to="/history" className="text-gray-300 hover:text-orange-500">History</Link>
         </nav>
 
         <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} ISRO Inspired. All rights reserved.</p>
