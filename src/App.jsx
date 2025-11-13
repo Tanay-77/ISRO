@@ -12,11 +12,11 @@ const App = () => {
   const [showStair, setShowStair] = useState(false)
 
   useEffect(() => {
-    // Trigger stair animation on route change
+    window.scrollTo(0, 0)
     setShowStair(true)
     const timer = setTimeout(() => {
       setShowStair(false)
-    }, 1500) // Duration matches your animation time
+    }, 1500)
     
     return () => clearTimeout(timer)
   }, [location.pathname])
