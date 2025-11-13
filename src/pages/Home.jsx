@@ -44,6 +44,7 @@ const Home = () => {
     }
   }
   return (
+    <>
     <div className='h-screen w-screen bg-black overflow-hidden'>
       {/* Navigation Bar */}
       <nav className='absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-4'>
@@ -89,24 +90,29 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Side: Decorative Space */}
-        <div className='w-1/2 h-full relative pointer-events-none overflow-hidden'>
-          {/* Video on right side */}
-          <div className='absolute inset-0'>
-            <Video />
+        {/* Right Side: NASA 3D Solar System */}
+        <div className='w-1/2 h-full relative overflow-hidden'>
+          {/* NASA 3D Model */}
+          <div className='absolute inset-0 pointer-events-auto'>
+            <iframe
+              src='https://solarsystem.nasa.gov/gltf_embed/2366/'
+              title='NASA 3D Solar System'
+              className='w-full h-full border-none'
+              allow='fullscreen'
+            />
           </div>
           {/* Optional glow effect overlay */}
-          <div className='absolute bottom-12 right-12 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl'></div>
+          <div className='absolute bottom-12 right-12 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl pointer-events-none'></div>
         </div>
       </div>
+    </div>
 
-      {/* Music Control */}
+    {/* Music Control */}
     <button
       onClick={togglePlayback}
       className='fixed bottom-4 right-4 z-50 rounded-full bg-white/20 hover:bg-white/30 text-white border border-white/40 p-3 backdrop-blur-md transition-all duration-300'
       aria-label={isPlaying ? 'Pause background music' : 'Play background music'}
     >
-      {/* Animated sound waves icon */}
       <svg
         width="24"
         height="24"
@@ -125,7 +131,7 @@ const Home = () => {
         <path d="M16 8c.5.5 1 1.5 1 4 0 2.5-.5 3.5-1 4" className={isPlaying ? 'sound-line line-5' : ''} />
       </svg>
     </button>
-    </div>
+    </>
   )
 }
 

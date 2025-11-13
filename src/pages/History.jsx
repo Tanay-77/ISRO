@@ -148,7 +148,7 @@ const History = () => {
         </div>
       </div>
 
-      <div ref={historySection2Ref} className='flex items-center gap-16 min-h-screen'>
+      <div ref={historySection2Ref} className='flex items-center gap-16 min-h-screen '>
         <div className='history-text flex-1'>
           <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>1980: SLV-3 Success</h2>
           <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
