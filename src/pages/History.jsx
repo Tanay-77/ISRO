@@ -94,34 +94,34 @@ const History = () => {
   
   return (
    <div>
-     <nav className='fixed top-0 left-0 right-0 z-50 px-12 py-4 bg-black/50 backdrop-blur-sm'>
+     <nav className='fixed top-0 left-0 right-0 z-50 px-4 md:px-12 py-4 bg-black/50 backdrop-blur-sm'>
        <Link to='/'>
-         <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-16 w-auto' />
+         <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-10 md:h-16 w-auto' />
        </Link>
      </nav>
      
      <div className='section1'>
-      <div ref={imageDevRef} className='absolute overflow-hidden h-[20vw] w-[15vw] rounded-3xl top-44 left-[30vw] '>
+      <div ref={imageDevRef} className='hidden md:block absolute overflow-hidden h-[20vw] w-[15vw] rounded-3xl top-44 left-[30vw] '>
             <img ref={imageRef} className='h-full w-full object-cover' src="https://www.isro.gov.in/media_isro/image/chairmanimages/resized/Sarabhai_medium.jpg.webp" alt="" />
       </div>
       <div className='relative font-[font2] text-white'>
-      <div className='mt-[55vh] '>
-          <h1 className='text-[20vw] text-center uppercase leading-[18vw]'>History of ISRO</h1>
+      <div className='mt-32 md:mt-[55vh]'>
+          <h1 className='text-4xl md:text-6xl lg:text-[20vw] text-center uppercase leading-tight md:leading-[18vw]'>History of ISRO</h1>
       </div>
-      <div className='pl-[40%] mt-20'>
-        <p className='text-6xl '>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Indian Space Research Organisation (ISRO) was founded in 1969 with a vision to harness space technology for national development. From its humble beginnings in a small church in Thumba, ISRO has grown into one of the world’s leading space agencies. </p>
+      <div className='px-4 md:pl-[40%] mt-8 md:mt-20'>
+        <p className='text-base md:text-2xl lg:text-6xl'>The Indian Space Research Organisation (ISRO) was founded in 1969 with a vision to harness space technology for national development. From its humble beginnings in a small church in Thumba, ISRO has grown into one of the world's leading space agencies. </p>
       </div>
     </div>
     </div>
 
-    <div className='w-full h-full py-20 px-10 mt-20'>
+    <div className='w-full h-full py-12 md:py-20 px-4 md:px-10 mt-12 md:mt-20'>
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
         baseRotation={5}
         blurStrength={10}
         containerClassName="text-white"
-        textClassName="text-6xl font-[font2] text-center"
+        textClassName="text-2xl md:text-4xl lg:text-6xl font-[font2] text-center"
       >
         ISRO stands as a symbol of India's scientific excellence and ambition. With each mission, it continues to explore new frontiers in space technology, research, and innovation — shaping a future driven by discovery.
       </ScrollReveal>
@@ -148,10 +148,10 @@ const History = () => {
         </div>
       </div>
 
-      <div ref={historySection2Ref} className='flex items-center gap-16 min-h-screen '>
+      <div ref={historySection2Ref} className='flex flex-col md:flex-row items-center gap-8 md:gap-16 min-h-auto md:min-h-screen'>
         <div className='history-text flex-1'>
-          <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>1980: SLV-3 Success</h2>
-          <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
+          <h2 className='text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 md:mb-8 font-[font1]'>1980: SLV-3 Success</h2>
+          <p className='text-base md:text-xl lg:text-3xl text-gray-300 leading-relaxed font-[font2]'>
             On July 18, 1980, India successfully launched its first indigenous Satellite Launch Vehicle (SLV-3), 
             placing the Rohini satellite into orbit. This historic achievement, led by Dr. APJ Abdul Kalam, 
             made India the sixth nation to have satellite launch capability. It was a defining moment that 
@@ -162,15 +162,15 @@ const History = () => {
           <img 
             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm9p6gpQX01rRCOJSStq4Nw3fL5p8J80-qyA55HwfL_oOg2NA5VO0yoJr8H514gAGdubT1OA_gi3OKeX3-Zxd_0H4yfh8gsGJ0dMNTzP-fk0xSZGQ-zj8Nuge75h5jfIq6s6aFd1tEc8c/s1600/SLV-3_Launch_Vehicle_1.jpg' 
             alt='SLV-3 Launch' 
-            className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
+            className='w-full h-60 md:h-96 lg:h-[600px] object-cover rounded-2xl shadow-2xl'
           />
         </div>
       </div>
 
-      <div ref={historySection3Ref} className='flex items-center gap-16 min-h-screen'>
+      <div ref={historySection3Ref} className='flex flex-col md:flex-row items-center gap-8 md:gap-16 min-h-auto md:min-h-screen'>
         <div className='history-text flex-1'>
-          <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>2014: Mangalyaan</h2>
-          <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
+          <h2 className='text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 md:mb-8 font-[font1]'>2014: Mangalyaan</h2>
+          <p className='text-base md:text-xl lg:text-3xl text-gray-300 leading-relaxed font-[font2]'>
             On September 24, 2014, ISRO's Mars Orbiter Mission (Mangalyaan) successfully entered Mars orbit, 
             making India the first nation to reach Mars on its maiden attempt and the fourth space agency to 
             reach Mars. Completed at a fraction of the cost of similar missions, it showcased ISRO's efficiency 
@@ -181,15 +181,15 @@ const History = () => {
           <img 
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg/330px-Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg' 
             alt='Mars Orbiter Mission' 
-            className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
+            className='w-full h-60 md:h-96 lg:h-[600px] object-cover rounded-2xl shadow-2xl'
           />
         </div>
       </div>
 
-      <div ref={historySection4Ref} className='flex items-center gap-16 min-h-screen'>
+      <div ref={historySection4Ref} className='flex flex-col md:flex-row items-center gap-8 md:gap-16 min-h-auto md:min-h-screen'>
         <div className='history-text flex-1'>
-          <h2 className='text-7xl font-bold text-white mb-8 font-[font1]'>2023: Chandrayaan-3</h2>
-          <p className='text-3xl text-gray-300 leading-relaxed font-[font2]'>
+          <h2 className='text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 md:mb-8 font-[font1]'>2023: Chandrayaan-3</h2>
+          <p className='text-base md:text-xl lg:text-3xl text-gray-300 leading-relaxed font-[font2]'>
             On August 23, 2023, India created history when Chandrayaan-3 successfully achieved a soft landing 
             near the lunar south pole. This made India the first country to land near this unexplored region 
             and the fourth nation to achieve a soft landing on the Moon. The mission's rover, Pragyan, 
@@ -200,7 +200,7 @@ const History = () => {
           <img 
             src='https://science.nasa.gov/wp-content/uploads/2023/06/chandrayaan-3-lander-rover-isro-jpg.webp' 
             alt='Chandrayaan-3' 
-            className='w-full h-[600px] object-cover rounded-2xl shadow-2xl'
+            className='w-full h-60 md:h-96 lg:h-[600px] object-cover rounded-2xl shadow-2xl'
           />
         </div>
       </div>

@@ -53,20 +53,20 @@ useGSAP(() => {
 
 
   return (
-    <div className='text-white p-4'>
-      <nav className=' top-0 left-0 right-0 z-50 px-12 py-4 bg-black/50 backdrop-blur-sm'>
+    <div className='text-white p-2 md:p-4'>
+      <nav className='top-0 left-0 right-0 z-50 px-4 md:px-12 py-4 bg-black/50 backdrop-blur-sm'>
         <Link to='/'>
-          <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-16 w-auto' />
+          <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-10 md:h-16 w-auto' />
         </Link>
       </nav>
       
-      <div className='pt-[30vh] text-center '>
-        <h2 className='font-[font2] text-[9vw] uppercase -mt-20'>Projects</h2>
+      <div className='pt-20 md:pt-[30vh] text-center'>
+        <h2 className='font-[font2] text-4xl md:text-6xl lg:text-[9vw] uppercase -mt-10 md:-mt-20'>Projects</h2>
       </div>
-    <div className='-mt-0 lol'>
+    <div className='mt-8 md:mt-0 space-y-4 md:space-y-4'>
       {projects.map((elem, index)=>{
-       return <div className='hero w-full h-[700px]  flex gap-4 mb-4'>
-        <ProjectCard key={index} image1={elem.image1}  image2={elem.image2} text1={elem.text1} text2={elem.text2} />
+       return <div key={index} className='hero w-full h-auto md:h-[700px] flex flex-col md:flex-row gap-2 md:gap-4 mb-2 md:mb-4'>
+        <ProjectCard image1={elem.image1} image2={elem.image2} text1={elem.text1} text2={elem.text2} />
       </div>
       })}
     </div>

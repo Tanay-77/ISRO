@@ -47,9 +47,9 @@ const Home = () => {
     <>
     <div className='h-screen w-screen bg-black overflow-hidden'>
       {/* Navigation Bar */}
-      <nav className='absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-4'>
-        <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-16 w-auto' />
-        <div className='flex gap-8 text-white text-sm font-semibold tracking-wide'>
+      <nav className='absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-12 py-4'>
+        <img src='https://www.firesafetysearch.com/wp-content/uploads/2016/07/Indian-Space-Agency-employs-Sharpeye.gif' alt='ISRO Logo' className='h-10 md:h-16 w-auto' />
+        <div className='hidden md:flex gap-8 text-white text-sm font-semibold tracking-wide'>
           <a href='#' className='hover:text-blue-400 transition'>MISSIONS</a>
           <a href='#' className='hover:text-blue-400 transition'>VEHICLES</a>
           <a href='#' className='hover:text-blue-400 transition'>ABOUT</a>
@@ -65,13 +65,13 @@ const Home = () => {
       <div className='absolute inset-0 bg-black/50 pointer-events-none'></div>
 
       {/* Main Content Container */}
-      <div className='relative h-full w-full flex items-center'>
+      <div className='relative h-full w-full flex flex-col lg:flex-row items-center'>
         {/* Left Side: Content */}
-        <div className='w-1/2 z-10 px-16 flex flex-col justify-center'>
-          <div className='space-y-8'>
+        <div className='w-full lg:w-1/2 z-10 px-4 md:px-8 lg:px-16 flex flex-col justify-center py-12 lg:py-0'>
+          <div className='space-y-6 md:space-y-8'>
             {/* Main Headline */}
             <div>
-              <h1 className='text-7xl font-bold text-white leading-tight tracking-tight'>
+              <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
                 ADVANCING
                 <br />
                 <span className='text-orange-500'>SPACE</span> SCIENCE
@@ -79,7 +79,7 @@ const Home = () => {
             </div>
 
             {/* Description */}
-            <p className='text-xl text-gray-300 max-w-lg leading-relaxed'>
+            <p className='text-sm md:text-lg lg:text-xl text-gray-300 max-w-lg leading-relaxed'>
               ISRO is dedicated to space exploration and scientific research. We push the boundaries of human knowledge and technology to explore the cosmos.
             </p>
 
@@ -91,7 +91,7 @@ const Home = () => {
         </div>
 
         {/* Right Side: NASA 3D Solar System */}
-        <div className='w-1/2 h-full relative overflow-hidden'>
+        <div className='w-full lg:w-1/2 h-64 md:h-80 lg:h-full relative overflow-hidden'>
           {/* NASA 3D Model */}
           <div className='absolute inset-0 pointer-events-auto'>
             <iframe
@@ -102,7 +102,7 @@ const Home = () => {
             />
           </div>
           {/* Optional glow effect overlay */}
-          <div className='absolute bottom-12 right-12 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl pointer-events-none'></div>
+          <div className='hidden lg:block absolute bottom-12 right-12 w-60 md:w-80 h-60 md:h-80 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl pointer-events-none'></div>
         </div>
       </div>
     </div>
@@ -110,19 +110,19 @@ const Home = () => {
     {/* Music Control */}
     <button
       onClick={togglePlayback}
-      className='fixed bottom-4 right-4 z-50 rounded-full bg-white/20 hover:bg-white/30 text-white border border-white/40 p-3 backdrop-blur-md transition-all duration-300'
+      className='fixed bottom-4 right-4 z-50 rounded-full bg-white/20 hover:bg-white/30 text-white border border-white/40 p-2 md:p-3 backdrop-blur-md transition-all duration-300'
       aria-label={isPlaying ? 'Pause background music' : 'Play background music'}
     >
       <svg
-        width="24"
-        height="24"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={isPlaying ? '' : 'opacity-50'}
+        className={`${isPlaying ? '' : 'opacity-50'} md:w-6 md:h-6`}
       >
         <path d="M12 1v22" className={isPlaying ? 'sound-line line-1' : ''} />
         <path d="M4.5 4.5c-1 1-2 3-2 6.5 0 3.5 1 5.5 2 6.5" className={isPlaying ? 'sound-line line-2' : ''} />
